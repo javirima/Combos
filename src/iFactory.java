@@ -1,4 +1,4 @@
 public interface iFactory {
-    public iPrototype getPrototype();
-    public void addPrototype(String name, iPrototype prototype);
+    public iComboPrototype getPrototype(String name);
+    public void addPrototype(String name, iComboPrototype prototype);
 }

@@ -1,11 +1,9 @@
-public class Bebida {
-    String nombre;
-    double precio;
+public class Bebida extends Alimento {
 
-    
+
+
     public Bebida(String nombre, double precio) {
-        this.nombre = nombre;
-        this.precio = precio;
+        super(nombre, precio);
     }
 
     
