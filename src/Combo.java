@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Combo {
+public class Combo implements iComboPrototype {
     public String nombre;
     public double precio;
     public ArrayList<PlatoFuerte> principal;
@@ -16,6 +16,17 @@ public class Combo {
         this.principal = principal;
         
     }    
+
+    @Override
+    public iComboPrototype clone() {
+        Combo clone = new Combo(nombre, precio, bebida, acomp, principal);
+        return clone;
+    }
+
+    @Override
+    public iComboPrototype deepClone() {
+        return clone();
+    }
 
     private static class ComboBuilder implements iBuilder<Combo>{
         private String nombre;
@@ -65,5 +76,7 @@ public class Combo {
         
 
     }
+
+   
 
 }
